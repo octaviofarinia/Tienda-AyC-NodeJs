@@ -1,0 +1,62 @@
+@import "mixins";
+
+//MEDIOS DE CONTACTO
+.sectionMediosContacto {
+	@include flex-dir-justify-align(column, null, center);
+}
+.tituloYEncabezado {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.celular {
+	@include flex-dir-justify-align(row, center, center);
+	margin-bottom: 20px;
+	p {
+		margin: 0px 0px 0px 10px;
+	}
+}
+.email {
+	@extend .celular;
+	p {
+		margin: 0px 0px 0px 10px;
+	}
+}
+
+//FORMULARIO DE CONTACTO
+.sectionFormContacto {
+	@include flex-dir-justify-align(column, null, center);
+}
+.encabezadoFormularioContacto {
+	text-align: center;
+}
+form.formularioContacto {
+	width: 100%;
+	@include flex-dir-justify-align(column, center, center);
+}
+.bloqueNombre, .bloqueConsulta {
+	display: flex;
+	flex-direction: column;
+}
+.bloqueEmail {
+	@extend .bloqueNombre;
+	margin-top: 10px;
+}
+.botonEnviar {
+	margin-top: 20px;
+}
+
+//MEDIA QUERIES
+@media (max-width: 768px) {
+	.bloqueNombre {
+		margin-top: 10px;
+	}
+	.bloqueConsulta {
+		margin-top: 10px;
+	}
+	.newsletterDiv {
+		margin-top: 10px;
+	}
+	.tipoConsultaDiv {
+		margin-top: 20px;
+	}
+}
